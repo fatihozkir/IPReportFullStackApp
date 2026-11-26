@@ -4,3 +4,11 @@ services:
     build:
       context: .
       dockerfile: IPReport.WebAPI/Dockerfile
+  
+  ipreport.angular.app:
+    image: ${DOCKER_REGISTRY-}ipreportangularapp
+    build:
+        context: ./ipreport-angular-app
+        dockerfile: Dockerfile
+    depends_on:
+        - ipreport.webapi
