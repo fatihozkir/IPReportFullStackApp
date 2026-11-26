@@ -1,0 +1,6 @@
+services:
+  ipreport.webapi:
+    image: ${DOCKER_REGISTRY-}ipreportwebapi
+    build:
+      context: .
+      dockerfile: IPReport.WebAPI/Dockerfile
