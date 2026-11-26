@@ -1,0 +1,6 @@
+@IPReport.WebAPI_HostAddress = http://localhost:5137
+
+GET {{IPReport.WebAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
