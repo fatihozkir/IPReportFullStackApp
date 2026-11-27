@@ -1,9 +1,44 @@
 services:
+  mysql:
+    image: mysql:8.4
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ipreport
+      MYSQL_USER: ipreport_app
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "mysqladmin ping -h localhost -u root -p$$MYSQL_ROOT_PASSWORD --silent"
+        ]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  phpmyadmin:
+    image: phpmyadmin:5.2.3-apache
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+    ports:
+      - "8082:80"
+    depends_on:
+      mysql:
+        condition: service_healthy
+
   ipreport.webapi:
     image: ${DOCKER_REGISTRY-}ipreportwebapi
     build:
       context: .
       dockerfile: IPReport.WebAPI/Dockerfile
+    depends_on:
+      mysql:
+        condition: service_healthy
   
   ipreport.angular.app:
     image: ${DOCKER_REGISTRY-}ipreportangularapp
@@ -12,3 +47,6 @@ services:
         dockerfile: Dockerfile
     depends_on:
         - ipreport.webapi
+
+volumes:
+  mysql-data:

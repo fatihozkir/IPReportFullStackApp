@@ -3,6 +3,7 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_HTTP_PORTS=8080
+      - ConnectionStrings__DefaultConnection=Server=mysql;Port=3306;Database=ipreport;User=ipreport_app;Password=${MYSQL_PASSWORD}
     ports:
       - "8080"
     volumes:
