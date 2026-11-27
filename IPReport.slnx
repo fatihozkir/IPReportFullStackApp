@@ -1,6 +1,18 @@
 <Solution>
-  <Project Path="docker-compose.dcproj">
-    <Build />
-  </Project>
-  <Project Path="IPReport.WebAPI/IPReport.WebAPI.csproj" />
+  <Folder Name="/app-config/">
+    <Project Path="docker-compose.dcproj">
+      <Build />
+    </Project>
+  </Folder>
+  <Folder Name="/host/">
+    <Project Path="IPReport.WebAPI/IPReport.WebAPI.csproj" />
+  </Folder>
+  <Folder Name="/modules/" />
+  <Folder Name="/modules/IPReport/">
+    <Project Path="Modules/IPReport/IPReport.Core/IPReport.Core.csproj" Id="b53102c1-1294-47ee-8f23-8dc28e70377d" />
+    <Project Path="Modules/IPReport/IPReport.EntityFramework/IPReport.EntityFramework.csproj" />
+  </Folder>
+  <Folder Name="/modules/SharedKernel/">
+    <Project Path="Modules/SharedKernel/SharedKernel.Core/SharedKernel.Core.csproj" Id="0ee61972-8c0b-40c1-8dd8-4f3a839d1813" />
+  </Folder>
 </Solution>

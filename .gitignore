@@ -113,3 +113,8 @@ x86/
 
 # Built Visual Studio Code Extensions
 *.vsix
+
+### Local environment
+.env
+.env.*
+!.env.example
