@@ -50,7 +50,7 @@ namespace IPReport.EntityFramework.Migrations
                     b.HasIndex("Email")
                         .IsUnique();
 
-                    b.ToTable("IPR$AppUsers");
+                    b.ToTable("IPR$AppUsers", (string)null);
                 });
 
             modelBuilder.Entity("IPReport.Core.Entities.IPForensicsReports.IPForensicsReport", b =>
@@ -115,7 +115,7 @@ namespace IPReport.EntityFramework.Migrations
 
                     b.HasIndex("AppUser_FK", "CreatedDate");
 
-                    b.ToTable("IPR$IPForensicsReports");
+                    b.ToTable("IPR$IPForensicsReports", (string)null);
                 });
 
             modelBuilder.Entity("IPReport.Core.Entities.IPForensicsReports.IPForensicsReport", b =>

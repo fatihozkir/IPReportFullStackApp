@@ -1,6 +1,7 @@
 ﻿using IPReport.Core.Entities;
 using IPReport.Core.Entities.IPForensicsReports;
 using Microsoft.EntityFrameworkCore;
+using SharedKernel.Core.Extensions.Persistences;
 
 namespace IPReport.EntityFramework.EntityFramework
 {
@@ -18,6 +19,9 @@ namespace IPReport.EntityFramework.EntityFramework
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
+            
+            
+            modelBuilder.ValidatePrimaryKeyTypes();
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using SharedKernel.Core.Base.Abilities;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace SharedKernel.Core.Base
 {
@@ -7,7 +6,7 @@ namespace SharedKernel.Core.Base
     /// Entity Base class for a Database Entity. It does provide the primary key of the table by the given type
     /// </summary>
     /// <typeparam name="TKey"></typeparam>
-    public abstract class EntityBase<TKey>
+    public abstract class EntityBase<TKey> where TKey : notnull
     {
         /// <summary>
         /// Specifies the Primary key of the table by the given type
