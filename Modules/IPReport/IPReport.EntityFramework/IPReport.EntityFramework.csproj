@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\SharedKernel\SharedKernel.EntityFramework\SharedKernel.EntityFramework\SharedKernel.EntityFramework.csproj" />
     <ProjectReference Include="..\IPReport.Core\IPReport.Core.csproj" />
   </ItemGroup>
 

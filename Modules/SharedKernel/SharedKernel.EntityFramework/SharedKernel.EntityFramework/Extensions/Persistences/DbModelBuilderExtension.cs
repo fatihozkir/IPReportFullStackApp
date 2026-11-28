@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace SharedKernel.Core.Extensions.Persistences
+namespace SharedKernel.EntityFramework.Extensions.Persistences
 {
     public static class DbModelBuilderExtension
     {

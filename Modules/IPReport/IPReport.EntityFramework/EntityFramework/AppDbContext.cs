@@ -1,7 +1,7 @@
 ﻿using IPReport.Core.Entities;
 using IPReport.Core.Entities.IPForensicsReports;
 using Microsoft.EntityFrameworkCore;
-using SharedKernel.Core.Extensions.Persistences;
+using SharedKernel.EntityFramework.Extensions.Persistences;
 
 namespace IPReport.EntityFramework.EntityFramework
 {

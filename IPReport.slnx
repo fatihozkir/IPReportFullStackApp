@@ -14,5 +14,6 @@
   </Folder>
   <Folder Name="/modules/SharedKernel/">
     <Project Path="Modules/SharedKernel/SharedKernel.Core/SharedKernel.Core.csproj" Id="0ee61972-8c0b-40c1-8dd8-4f3a839d1813" />
+    <Project Path="Modules/SharedKernel/SharedKernel.EntityFramework/SharedKernel.EntityFramework/SharedKernel.EntityFramework.csproj" Id="c797e836-df71-49a0-9390-2b905469fb9f" />
   </Folder>
 </Solution>
