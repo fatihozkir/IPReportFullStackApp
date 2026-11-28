@@ -1,8 +1,8 @@
 ﻿using SharedKernel.Core.Base;
-using SharedKernel.Core.Managers.Abstract;
 using SharedKernel.Core.Repositories.Abstract;
+using SharedKernel.Application.Managers.Abstract;
 
-namespace SharedKernel.Core.Managers.Concretes
+namespace SharedKernel.Application.Managers.Concretes
 {
     public abstract class ManagerBase<TEntity, TKey> : IManagerBase<TEntity, TKey> where TEntity : EntityBase<TKey> where TKey : notnull
     {

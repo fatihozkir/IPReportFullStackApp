@@ -1,4 +1,4 @@
-﻿namespace SharedKernel.Core.Managers.Abstract
+﻿namespace SharedKernel.Application.Managers.Abstract
 {
     public interface IManagerBase<TEntity, TKey> where TEntity : class where TKey : notnull
     {
