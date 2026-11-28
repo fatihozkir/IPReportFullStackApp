@@ -9,7 +9,7 @@ namespace IPReport.Core.Entities.IPForensicsReports
     /// Database entity for IPR$IPForensicsReports table entries
     /// </summary>
     [Table("IPR$IPForensicsReports")]
-    public class IPForensicsReport : EntityBase<string>, IHasCreationDate
+    public class IPForensicsReport : EntityBase<long>, IHasCreationDate
     {
         /// <summary>
         /// Stores the foreign key of the issued AppUser
